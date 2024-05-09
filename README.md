@@ -14,8 +14,8 @@ https://superficial-gladiolus-0fa.notion.site/Anteproyecto-VirtualMox-2ee74c2829
 
   . Flask:
 
-      - https://www.youtube.com/watch?v=7zg7TTr8DcE
-      - https://flask.palletsprojects.com/en/3.0.x/
+      https://www.youtube.com/watch?v=7zg7TTr8DcE
+      https://flask.palletsprojects.com/en/3.0.x/
       
 
   . 
