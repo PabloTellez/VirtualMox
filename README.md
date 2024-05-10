@@ -7,6 +7,7 @@ https://superficial-gladiolus-0fa.notion.site/Anteproyecto-VirtualMox-2ee74c2829
 
 # CheckPoint (Video)
 
+https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
 
 # Bibliografía
 
