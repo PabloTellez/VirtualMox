@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ evento['titulo'] }}</title>
+</head>
+<body>
+    <h1>{{ evento['titulo'] }}</h1>
+    <p>{{ evento['descripcion'] }}</p>
+    <p>{{ evento['fecha'] }}</p>
+    <h2>Reservaciones</h2>
+    <ul>
+        {% for reservacion in evento['reservaciones'] %}
+            <li>{{ reservacion['nombre'] }} - {{ reservacion['email'] }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('evento', evento_id=evento_id) }}" method="post">
+        <label for="nombre_usuario">Nombre:</label><br>
+        <input type="text" id="nombre_usuario" name="nombre_usuario" required><br>
+        <label for="email_usuario">Email:</label><br>
+        <input type="email" id="email_usuario" name="email_usuario" required><br>
+        <input type="submit" value="Reservar">
+    </form>
+</body>
+</html>
