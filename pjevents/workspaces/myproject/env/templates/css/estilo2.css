@@ -1,0 +1,33 @@
+.event-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.event-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.event-info {
+    margin-bottom: 10px;
+}
+
+.event-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.event-link:hover {
+    background-color: #0056b3;
+}
+
+.registration-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+}
