@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Inicio</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('registrar') }}">Registro</a></li>
+            <li><a href="{{ url_for('eventos') }}">Eventos</a></li>
+            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+
+            {% if current_user.is_authenticated %}
+                {% if current_user.role == 'admin' %}
+                    <li><a href="{{ url_for('crear_evento') }}">Crear Evento</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="content-container">
+        <h1>Bienvenido a la página de eventos</h1>
+    </div>
+</body>
+</html>

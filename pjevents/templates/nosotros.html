@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nosotros.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('registrar') }}">Registro</a></li>
+            <li><a href="{{ url_for('eventos') }}">Eventos</a></li>
+            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+
+            {% if current_user.is_authenticated %}
+                {% if current_user.role == 'admin' %}
+                    <li><a href="{{ url_for('crear_evento') }}">Crear Evento</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <div class="nosotros-container">
+        <h1>Nosotros</h1>
+        <p>Somos una comunidad apasionada por los eventos. Nuestra misión es proporcionar experiencias únicas y memorables para nuestros asistentes, ya sean conciertos, conferencias, festivales o cualquier otro tipo de evento.</p>
+
+        <h2>Nuestro Equipo</h2>
+        <p>Contamos con un equipo comprometido y talentoso que trabaja duro para organizar y ejecutar cada evento con éxito. Desde la planificación y la logística hasta la promoción y la atención al cliente, nuestro equipo se encarga de cada detalle para garantizar que nuestros eventos sean todo un éxito.</p>
+
+        <h2>Nuestra Visión</h2>
+        <p>Queremos convertirnos en la plataforma líder para la organización y promoción de eventos, conectando a organizadores, artistas y asistentes en un ambiente dinámico y emocionante. Nos esforzamos por ofrecer una experiencia única y personalizada en cada evento que organizamos.</p>
+    </div>
+</body>
+</html>

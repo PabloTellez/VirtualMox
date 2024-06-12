@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ evento[1] }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/evento.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('registrar') }}">Registro</a></li>
+            <li><a href="{{ url_for('eventos') }}">Eventos</a></li>
+            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+
+            {% if current_user.is_authenticated %}
+                {% if current_user.role == 'admin' %}
+                    <li><a href="{{ url_for('crear_evento') }}">Crear Evento</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+<div class="evento-container">
+        <h1>{{ evento[1] }}</h1>
+        <p>Descripción: {{ evento[2] }}</p>
+        <p>Fecha: {{ evento[3] }}</p>
+        <p>Ubicación: {{ evento[4] }}</p>
+        <p>Máximo de Personas: {{ evento[5] }}</p>
+
+        <h2>Asistentes</h2>
+        <ul class="asistentes-list">
+            {% for asistente in asistentes %}
+                <li>{{ asistente[0] }} - {{ asistente[1] }} {{ asistente[2] }}</li>
+            {% endfor %}
+        </ul>
+
+        {% if not current_user.is_authenticated %}
+        <h2>Apuntarse al evento</h2>
+        <form class="formulario-apuntarse" method="POST" action="{{ url_for('apuntarse', evento_id=evento[0]) }}">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="apellido1">Apellido 1:</label>
+            <input type="text" id="apellido1" name="apellido1" required><br>
+
+            <input type="submit" value="Apuntarse">
+        </form>
+        {% endif %}
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flash-messages">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

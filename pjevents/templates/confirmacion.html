@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmación de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .back-home:hover {
+            background-color: #45a049;
+        }
+        .icon {
+            font-size: 50px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>El usuario {{ usuario[1] }} ha sido registrado correctamente</h1>
+        <div class="icon">✔️</div>
+        <a href="{{ url_for('index') }}" class="back-home">Volver a Inicio</a>
+    </div>
+</body>
+</html>

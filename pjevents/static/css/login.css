@@ -1,0 +1,107 @@
+body {
+  background-image: url(https://img.freepik.com/foto-gratis/textura-papel-colorido-abstracto_53876-96124.jpg?t=st=1718126622~exp=1718130222~hmac=1b024a1af129879072959dc7150e340a997afae7243db6f44b4d625fd385281f&w=1800);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.materialContainer {
+  width: 100%;
+  max-width: 460px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* Estilos para el formulario de inicio de sesión /
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="password"],
+form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/ Ajuste del ancho máximo para los inputs /
+form input[type="text"],
+form input[type="password"] {
+  max-width: 500px; / Puedes ajustar este valor según tu preferencia */
+}
+
+form button[type="submit"] {
+  background-color: #ED2553;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #333;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.flash-messages {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.flash-messages li {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 18px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flash-messages li:hover {
+  transform: scale(1.05);
+}

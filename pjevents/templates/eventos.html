@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Eventos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/eventos.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('registrar') }}">Registro</a></li>
+            <li><a href="{{ url_for('eventos') }}">Eventos</a></li>
+            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+
+            {% if current_user.is_authenticated %}
+                {% if current_user.role == 'admin' %}
+                    <li><a href="{{ url_for('crear_evento') }}">Crear Evento</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <h1>Eventos</h1>
+    <ul>
+        {% for evento in eventos %}
+            <li><a href="{{ url_for('evento', evento_id=evento[0]) }}">{{ evento[1] }}</a></li>
+        {% endfor %}
+    </ul>
+
+    {% if evento_id %}
+        <h2>Apuntarse a un evento</h2>
+        <form method="POST" action="{{ url_for('apuntarse', evento_id=evento_id) }}">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellido1">Apellido 1:</label>
+            <input type="text" id="apellido1" name="apellido1" required><br><br>
+
+            <input type="submit" value="Apuntarse">
+        </form>
+    {% endif %}
+</body>
+</html>

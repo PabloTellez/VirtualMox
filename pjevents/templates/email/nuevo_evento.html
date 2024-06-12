@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nuevo Evento Creado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nuevo Evento Creado</h2>
+        <p><strong>Título:</strong> {{ titulo }}</p>
+        <p><strong>Descripción:</strong> {{ descripcion }}</p>
+        <p><strong>Fecha:</strong> {{ fecha }}</p>
+        <p><strong>Ubicación:</strong> {{ ubicacion }}</p>
+        <p>¡No te lo pierdas!</p>
+    </div>
+</body>
+</html>
