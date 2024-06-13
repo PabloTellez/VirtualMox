@@ -3,7 +3,8 @@
 https://superficial-gladiolus-0fa.notion.site/Anteproyecto-VirtualMox-2ee74c28291a4ff5ba3b30127b8b4f49?pvs=4
 
 # Diario
-
+https://drive.google.com/file/d/1iGIudgIh6-WUaow1TpMUoZELV_3cZURp/view
+https://drive.google.com/file/d/15ZbSVwBwqzopPVuIs8KdQIQEUpliOiml/view
 
 # CheckPoint (Video)
 
