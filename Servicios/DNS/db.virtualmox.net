@@ -1,0 +1,16 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+$ORIGIN pjevents.net.
+@	IN	SOA	ns1.pjevents.net. jmam-pts.pjevents.net. (
+			2023110800      ; Serial
+			1d		; Refresh
+			30m		; Retry
+			1w		; Expire
+			604800 )	; Negative Cache TTL
+;
+@	IN	NS	ns1.pjevents.net.
+@	IN	A	192.168.5.1
+ns1	IN	A	192.168.5.2
+www	IN	A	192.168.5.3
