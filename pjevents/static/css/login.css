@@ -1,69 +1,70 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
 body {
-  background-image: url(https://img.freepik.com/foto-gratis/textura-papel-colorido-abstracto_53876-96124.jpg?t=st=1718126622~exp=1718130222~hmac=1b024a1af129879072959dc7150e340a997afae7243db6f44b4d625fd385281f&w=1800);
+  background-image: url('https://img.freepik.com/foto-gratis/textura-papel-colorido-abstracto_53876-96124.jpg?t=st=1718126622~exp=1718130222~hmac=1b024a1af129879072959dc7150e340a997afae7243db6f44b4d625fd385281f&w=1800');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .materialContainer {
   width: 100%;
-  max-width: 460px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Estilos para el formulario de inicio de sesión /
-
 h1 {
-  text-align: center;
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 form {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
   display: block;
   margin-bottom: 10px;
+  font-size: 18px;
   color: #333;
+  text-align: left;
 }
 
-form input[type="text"],
-form input[type="password"],
-form button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/ Ajuste del ancho máximo para los inputs /
 form input[type="text"],
 form input[type="password"] {
-  max-width: 500px; / Puedes ajustar este valor según tu preferencia */
+  width: calc(100% - 22px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 form button[type="submit"] {
+  width: 100%;
   background-color: #ED2553;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 0;
   border-radius: 5px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -74,18 +75,21 @@ form button[type="submit"]:hover {
 
 a {
   display: block;
-  text-align: center;
   margin-top: 20px;
   text-decoration: none;
-  color: #000;
+  color: #ED2553;
   font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #333;
 }
 
 .flash-messages {
   list-style: none;
   padding: 0;
   margin-top: 20px;
-  text-align: center;
 }
 
 .flash-messages li {
@@ -96,8 +100,6 @@ a {
   border: 1px solid #f5c6cb;
   border-radius: 5px;
   font-size: 18px;
-  max-width: 500px;
-  margin: 20px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }

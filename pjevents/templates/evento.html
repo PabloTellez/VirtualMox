@@ -23,7 +23,7 @@
         </ul>
     </nav>
 
-<div class="evento-container">
+    <div class="evento-container">
         <h1>{{ evento[1] }}</h1>
         <p>Descripción: {{ evento[2] }}</p>
         <p>Fecha: {{ evento[3] }}</p>
@@ -50,12 +50,12 @@
         </form>
         {% endif %}
 
-        {% with messages = get_flashed_messages() %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             <ul class="flash-messages">
-            {% for message in messages %}
-              <li>{{ message }}</li>
-            {% endfor %}
+              {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+              {% endfor %}
             </ul>
           {% endif %}
         {% endwith %}

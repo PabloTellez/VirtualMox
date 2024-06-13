@@ -185,27 +185,36 @@ def apuntarse(evento_id):
         cursor.close()
 
         if usuario_id:
+            usuario_id = usuario_id[0]  # Desempaqueta el id_usuario
             cursor = mysql.connection.cursor()
-            cursor.execute("SELECT COUNT(*) FROM Reserva WHERE id_evento = %s", (evento_id,))
-            num_asistentes = cursor.fetchone()[0]
 
-            cursor.execute("SELECT max_personas FROM Evento WHERE id_evento = %s", (evento_id,))
-            max_personas = cursor.fetchone()[0]
+            # Verifica si el usuario ya está apuntado al evento
+            cursor.execute("SELECT COUNT(*) FROM Reserva WHERE id_evento = %s AND id_usuario = %s", (evento_id, usuario_id))
+            already_registered = cursor.fetchone()[0]
 
-            if num_asistentes < max_personas:
-                cursor.execute(
-                    "INSERT INTO Reserva (id_evento, id_usuario, fecha_reserva) VALUES (%s, %s, NOW())",
-                    (evento_id, usuario_id)
-                )
-                mysql.connection.commit()
-                flash('Te has apuntado al evento con éxito.')
+            if already_registered:
+                flash('Ya estás apuntado a este evento.', 'error')
             else:
-                flash('El evento ha alcanzado el máximo de asistentes.')
+                cursor.execute("SELECT COUNT(*) FROM Reserva WHERE id_evento = %s", (evento_id,))
+                num_asistentes = cursor.fetchone()[0]
+
+                cursor.execute("SELECT max_personas FROM Evento WHERE id_evento = %s", (evento_id,))
+                max_personas = cursor.fetchone()[0]
+
+                if num_asistentes < max_personas:
+                    cursor.execute(
+                        "INSERT INTO Reserva (id_evento, id_usuario, fecha_reserva) VALUES (%s, %s, NOW())",
+                        (evento_id, usuario_id)
+                    )
+                    mysql.connection.commit()
+                    flash('Te has apuntado al evento con éxito.', 'success')
+                else:
+                    flash('El evento ha alcanzado el máximo de asistentes.', 'error')
 
             cursor.close()
             return redirect(url_for('evento', evento_id=evento_id))
         else:
-            flash('Nombre y apellido no encontrados en la base de datos.')
+            flash('Nombre y apellido no encontrados en la base de datos.', 'error')
             return redirect(url_for('evento', evento_id=evento_id))
     return render_template('apuntarse.html', evento_id=evento_id)
 
@@ -235,6 +244,33 @@ def enviar_notificacion_nuevo_evento(titulo, descripcion, fecha, ubicacion):
                 ubicacion=ubicacion
             )
             conn.send(msg)
+
+@app.route('/enviar_contacto', methods=['POST'])
+def enviar_contacto():
+    nombre = request.form['nombre']
+    email = request.form['email']
+    mensaje = request.form['mensaje']
+
+    # Validación básica
+    if not nombre or not email or not mensaje:
+        flash('Por favor complete todos los campos del formulario.')
+        return redirect(url_for('nosotros'))
+
+    # Configura el mensaje a enviar
+    msg = Message(subject='Mensaje de contacto desde PJEvents',
+                  sender='pjevents_1@hotmail.com',
+                  recipients=['pjevents_1@hotmail.com'])
+    msg.body = f'Nombre: {nombre}\nEmail: {email}\nMensaje:\n{mensaje}'
+
+    # Envía el correo
+    try:
+        mail.send(msg)
+        flash('¡Mensaje enviado con éxito!', 'success')
+    except Exception as e:
+        flash('Hubo un problema al enviar el mensaje. Por favor, inténtelo de nuevo más tarde.', 'error')
+        app.logger.error(f'Error al enviar correo electrónico: {str(e)}')
+
+    return redirect(url_for('nosotros'))
 
 if __name__ == '__main__':
     app.run(debug=True)
