@@ -12,7 +12,7 @@ Jesús Arcos y Pablo Téllez
 # Descripción
 En “VirtualMox” vamos a realizar una plataforma de gestión de eventos, siendo un proyecto destinado a desarrollar 
 una aplicación web que permitirá a los miembros explorar, organizar y participar en eventos dentro de su área. 
-La plataforma ofrecerá una amplia gama de funciones, incluyendo la visualización de eventos, integración con redes sociales, y 
+La plataforma ofrecerá una amplia gama de funciones, incluyendo la visualización de eventos, y 
 la notificación de eventos a través de correo electrónico. 
 
 # Tecnologías utilizadas
