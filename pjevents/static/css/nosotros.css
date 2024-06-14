@@ -19,35 +19,35 @@ body {
     padding: 20px;
 }
 
+/* Barra de navegación */
 nav {
     background-color: #333;
-    width: 100%;
-    padding: 10px 0;
+    padding: 12px;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    width: 100%;
+    z-index: 1000; 
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 20px;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 10px;
     transition: color 0.3s, box-shadow 0.3s;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #f8f8f8;
     box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
 }
@@ -59,7 +59,7 @@ nav ul li a:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
-    margin-top: 80px; /* Ajustar según sea necesario para evitar superposición con el nav */
+    margin-top: 80px; 
     text-align: center;
 }
 
@@ -82,8 +82,8 @@ h2 {
 }
 
 .alert {
-    max-width: 500px; /* Ancho máximo */
-    margin: 20px auto; /* Centrar horizontalmente */
+    max-width: 500px; 
+    margin: 20px auto; 
     padding: 15px 20px;
     border: 1px solid;
     border-radius: 5px;
@@ -97,29 +97,34 @@ h2 {
 }
 
 .alert-success {
-    background-color: #d4edda; /* Color de fondo para éxito */
-    color: #155724; /* Color del texto para éxito */
-    border-color: #c3e6cb; /* Color del borde para éxito */
+    background-color: #d4edda; 
+    color: #155724; 
+    border-color: #c3e6cb; 
 }
 
 .alert-error {
-    background-color: #f8d7da; /* Color de fondo para error */
-    color: #721c24; /* Color del texto para error */
-    border-color: #f5c6cb; /* Color del borde para error */
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border-color: #f5c6cb; 
 }
 
 footer {
     text-align: center;
+    padding: 8px 0;
+    background-color: #333;
+    color: #fff !important;
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
 }
 
-/* Estilos del formulario de contacto */
+footer p {
+    margin: 0;
+    color: #fff !important;
+    font-size: 18px; 
+}
+
+
 .formulario-contacto {
     max-width: 600px;
     margin: 20px auto;
@@ -163,10 +168,9 @@ footer {
     background-color: #555;
 }
 
-/* Estilos para notificaciones debajo del formulario */
 .notificacion {
-    max-width: 600px; /* Ancho máximo */
-    margin: 10px auto; /* Centrar horizontalmente */
+    max-width: 600px; 
+    margin: 10px auto; 
     padding: 15px 20px;
     border-radius: 5px;
     font-size: 18px;
@@ -179,13 +183,13 @@ footer {
 }
 
 .notificacion-success {
-    background-color: #d4edda; /* Color de fondo para éxito */
-    color: #155724; /* Color del texto para éxito */
-    border: 1px solid #c3e6cb; /* Color del borde para éxito */
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb; 
 }
 
 .notificacion-error {
-    background-color: #f8d7da; /* Color de fondo para error */
-    color: #721c24; /* Color del texto para error */
-    border: 1px solid #f5c6cb; /* Color del borde para error */
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border: 1px solid #f5c6cb; 
 }

@@ -44,27 +44,27 @@ nav a:hover {
 }
 
 h1 {
-    margin-top: 50px; /* Mayor separación desde el borde superior */
+    margin-top: 50px; 
     text-align: center;
-    font-size: 36px; /* Tamaño más grande del título */
-    color: #333; /* Color del texto */
+    font-size: 36px; 
+    color: #333; 
 }
 
 .formulario-registro {
     max-width: 600px;
     margin: 20px auto;
-    padding: 40px; /* Mayor espacio interno */
-    background-color: #f0f0f0; /* Fondo más claro */
-    border: 2px solid #ddd; /* Borde más definido */
+    padding: 40px; 
+    background-color: #f0f0f0; 
+    border: 2px solid #ddd; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .formulario-registro label {
     display: block;
-    margin-bottom: 10px; /* Espacio inferior de etiquetas */
-    font-size: 18px; /* Tamaño de letra para etiquetas */
-    color: #555; /* Color de las etiquetas */
+    margin-bottom: 10px;
+    font-size: 18px; 
+    color: #555; 
 }
 
 .formulario-registro input[type="text"],
@@ -72,10 +72,10 @@ h1 {
 .formulario-registro input[type="number"] {
     width: calc(100% - 20px);
     padding: 15px;
-    margin-bottom: 25px; /* Mayor espacio entre campos */
+    margin-bottom: 25px; 
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 16px; /* Tamaño de letra para campos */
+    font-size: 16px; 
 }
 
 .formulario-registro input[type="submit"] {
@@ -85,7 +85,7 @@ h1 {
     padding: 15px 30px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px; /* Tamaño de letra para botón */
+    font-size: 18px;
 }
 
 .formulario-registro input[type="submit"]:hover {
@@ -115,4 +115,19 @@ h1 {
 
 .flash-messages li:hover {
     transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+footer p {
+    margin: 0;
 }

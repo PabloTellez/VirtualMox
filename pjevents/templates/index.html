@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenidos a PJ Events</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-    <style>
-        /* Aquí puedes añadir estilos adicionales específicos para esta página si es necesario */
-    </style>
 </head>
 <body>
-    <!-- Encabezado fuera de la barra de navegación -->
     <header>
-        <h1>Bienvenidos a la página de eventos</h1>
+        <h1>Bienvenidos a PJ Events</h1>
     </header>
-
-    <!-- Barra de navegación -->
     <nav>
         <ul>
             <li><a href="{{ url_for('index') }}">Inicio</a></li>
@@ -33,53 +27,42 @@
             {% endif %}
         </ul>
     </nav>
-
-    <!-- Contenido principal -->
     <main class="main-container">
         <section id="carousel">
             <div class="carousel-item" style="background-image: url('https://img.freepik.com/foto-gratis/audiencia-emocionada-viendo-fuegos-artificiales-confeti-divirtiendose-festival-musica-noche-copiar-espacio_637285-559.jpg?t=st=1718309428~exp=1718313028~hmac=699c525ee73c4bf1bb07f2cec2a625959dbbf7fadf9b2042ea55715825045af5&w=1800');">
                 <p>Descubre nuestros eventos</p>
             </div>
-            <div class="carousel-item" style="background-image: url('https://img.freepik.com/fotos-premium/foto-multitud-animada-concierto-manos-levantadas-entusiasmo_822108-6544.jpg?w=1380');">
+            <div class="carousel-item" style="background-image: url('https://img.freepik.com/foto-gratis/grupo-personas-caminando-caminata-bali_72229-1531.jpg?t=st=1718354373~exp=1718357973~hmac=ce121ff657ed962533e96bdc0f4db67a299ba23d0e3a438b5dc086895a98be8a&w=740'">
                 <p>¡No te pierdas nuestros próximos eventos!</p>
             </div>
-            <!-- Agrega más imágenes al carrousel según necesites -->
         </section>
 
         <section id="eventos-destacados">
             <h2>Eventos Destacados</h2>
             <div class="evento">
-                <img src="evento1.jpg" alt="Evento 1">
-                <h3>Concierto en Vivo</h3>
-                <p>Fecha: 15 de julio de 2024</p>
-                <p>Descripción corta del evento...</p>
+                <h3>Concierto de Pablo López</h3>
+                <p>Fecha: 15 y 16 de julio de 2024</p>
+                <p>Pablo Lopez vuelve a su ciudad natal y actuara dos dias en la Plaza de Toros de la Malagueta</p>
             </div>
             <div class="evento">
-                <img src="evento2.jpg" alt="Evento 2">
-                <h3>Festival de Arte</h3>
-                <p>Fecha: 22 de agosto de 2024</p>
-                <p>Descripción corta del evento...</p>
+                <h3>Festival de Gastronomía</h3>
+                <p>Fecha: 19-22 de agosto de 2024</p>
+                <p>El Festival de la comida aterriza en Malaga, del 19 al 22 de Agosto en el Palacio de Ferias se podra disfrutar de la mayor fiesta de la comida en la que tendran cabida comidas de todo el mundo: ¡No te lo pierdas! </p>
             </div>
-            <!-- Agrega más eventos destacados según necesites -->
         </section>
 
         <section id="testimonios">
-            <h2>Testimonios de Clientes</h2>
+            <h2>Opiniones de Clientes</h2>
             <div class="testimonial">
-                <img src="cliente1.jpg" alt="Cliente 1">
                 <p>"¡Increíble experiencia! Los eventos de PJ Events son únicos."</p>
                 <p><strong>María Pérez</strong></p>
             </div>
             <div class="testimonial">
-                <img src="cliente2.jpg" alt="Cliente 2">
                 <p>"He asistido a varios eventos y siempre cumplen con mis expectativas."</p>
                 <p><strong>José Rodríguez</strong></p>
             </div>
-            <!-- Agrega más testimonios según necesites -->
         </section>
     </main>
-
-    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 PJ Events. Todos los derechos reservados.</p>
     </footer>

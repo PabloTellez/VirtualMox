@@ -132,7 +132,7 @@ def eventos():
     cursor.execute("SELECT * FROM Evento")
     eventos = cursor.fetchall()
     cursor.close()
-    evento_id = request.args.get('evento_id')  # Obtener el evento_id de los parámetros de la URL
+    evento_id = request.args.get('evento_id')
     return render_template('eventos.html', eventos=eventos, evento_id=evento_id)
 
 @app.route('/evento/<int:evento_id>')
@@ -185,7 +185,7 @@ def apuntarse(evento_id):
         cursor.close()
 
         if usuario_id:
-            usuario_id = usuario_id[0]  # Desempaqueta el id_usuario
+            usuario_id = usuario_id[0]
             cursor = mysql.connection.cursor()
 
             # Verifica si el usuario ya está apuntado al evento
