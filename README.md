@@ -27,11 +27,20 @@ Servicios: DHCP, DNS y HTTP.
 ![Untitled](https://github.com/PabloTellez/VirtualMox/assets/74043227/9dcbd569-d5b8-464e-956e-5096ee234b1d)
 ![Untitled(1)](https://github.com/PabloTellez/VirtualMox/assets/74043227/04de1a94-ee0c-48c2-9dd3-d8ac5eee2386)
 
+# Breve tutorial de uso con capturas de pantalla y/o material multimedia (Manual_de_Usuario_Promox).
+https://drive.google.com/file/d/1c6Cy3ABHXS62Lja9NXQ0T-TvchapVHH_/view
 
+# URL de acceso
+<!-- VPN PARA ENTRAR A PROMOX -->
+<!-- En caso de que se quiera acceder, se debe avisar al anfitrión host, que soy yo, Pablo Téllez,
+y ya os daría acceso, ya que tengo un dualboot con mi Windows, y si estoy en él, pues no se podrá acceder.-->
+https://10.147.19.15:8006
 
-# CheckPoint (Video)
+# Presentación PDF
+https://drive.google.com/file/d/1_bSmQt4Y3s15UXcGX7YcbwESH0WpvyZ9/view
 
-https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
+# Bitácora
+https://drive.google.com/file/d/15ZbSVwBwqzopPVuIs8KdQIQEUpliOiml/view
 
 # Bibliografía
 
@@ -45,5 +54,14 @@ https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
       
 
   . 
+
+# Vídeo Final
+https://www.youtube.com/watch?v=nV2dMMMeEFY
+
+# CheckPoint (Video)
+
+https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
+
+
 
 
