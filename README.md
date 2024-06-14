@@ -17,10 +17,15 @@ la notificación de eventos a través de correo electrónico.
 
 # Tecnologías utilizadas
 Proxmox (VMs Ubuntu 20.04).
+
 Python (Flask).
+
 HTML, CSS.
+
 MySQL.
+
 Correo.
+
 Servicios: DHCP, DNS y HTTP.
 
 # Esquema E/R de la base de datos
