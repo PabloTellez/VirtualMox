@@ -6,6 +6,29 @@ https://superficial-gladiolus-0fa.notion.site/Anteproyecto-VirtualMox-2ee74c2829
 https://drive.google.com/file/d/1iGIudgIh6-WUaow1TpMUoZELV_3cZURp/view
 https://drive.google.com/file/d/15ZbSVwBwqzopPVuIs8KdQIQEUpliOiml/view
 
+# Autores
+Jesús Arcos y Pablo Téllez
+
+# Descripción
+En “VirtualMox” vamos a realizar una plataforma de gestión de eventos, siendo un proyecto destinado a desarrollar 
+una aplicación web que permitirá a los miembros explorar, organizar y participar en eventos dentro de su área. 
+La plataforma ofrecerá una amplia gama de funciones, incluyendo la visualización de eventos, integración con redes sociales, y 
+la notificación de eventos a través de correo electrónico. 
+
+# Tecnologías utilizadas
+Proxmox (VMs Ubuntu 20.04).
+Python (Flask).
+HTML, CSS.
+MySQL.
+Correo.
+Servicios: DHCP, DNS y HTTP.
+
+# Esquema E/R de la base de datos
+![Untitled](https://github.com/PabloTellez/VirtualMox/assets/74043227/9dcbd569-d5b8-464e-956e-5096ee234b1d)
+![Untitled(1)](https://github.com/PabloTellez/VirtualMox/assets/74043227/04de1a94-ee0c-48c2-9dd3-d8ac5eee2386)
+
+
+
 # CheckPoint (Video)
 
 https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
