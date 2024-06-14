@@ -36,9 +36,9 @@ Servicios: DHCP, DNS y HTTP.
 https://drive.google.com/file/d/1c6Cy3ABHXS62Lja9NXQ0T-TvchapVHH_/view
 
 # URL de acceso
-<!-- VPN PARA ENTRAR A PROMOX -->
-<!-- En caso de que se quiera acceder, se debe avisar al anfitrión host, que soy yo, Pablo Téllez,
-y ya os daría acceso, ya que tengo un dualboot con mi Windows, y si estoy en él, pues no se podrá acceder.-->
+** VPN PARA ENTRAR A PROMOX **
+** En caso de que se quiera acceder, se debe avisar al anfitrión host, que soy yo, Pablo Téllez,
+y ya os daría acceso, ya que tengo un dualboot con mi Windows, y si estoy en él, pues no se podrá acceder. **
 https://10.147.19.15:8006
 
 # Presentación PDF
