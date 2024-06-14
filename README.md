@@ -60,8 +60,14 @@ https://drive.google.com/file/d/15ZbSVwBwqzopPVuIs8KdQIQEUpliOiml/view
       https://www.youtube.com/watch?v=7zg7TTr8DcE
       https://flask.palletsprojects.com/en/3.0.x/
       https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_11_Bullseye#Connect_to_the_Proxmox_VE_web_interface
+      https://drive.google.com/file/d/1o7cNbpBKz2HGjNcUS4CP8Ybr-HPfN4pd/view
+      https://drive.google.com/file/d/10gn6vS1zpzSGmd7eukF2Xp117aUoxeaj/view
+      https://drive.google.com/file/d/1VJjYEb4Wb46E0Uf-bkHXSLvA4jPGjno6/view
+      https://drive.google.com/file/d/1qcVXLREAZao2KksNRN6GG2_R7yo3S8TD/view
+      https://www.youtube.com/watch?v=-1DmVCPB6H8
+      https://help.ovhcloud.com/csm/en-dedicated-servers-proxmox-network-hg-scale?id=kb_article_view&sysparm_article=KB0043913
+      https://www.youtube.com/watch?v=IhEE_QlI1MU
       
-
   . 
 
 # Vídeo Final
@@ -70,7 +76,3 @@ https://www.youtube.com/watch?v=nV2dMMMeEFY
 # CheckPoint (Video)
 
 https://www.youtube.com/watch?v=PESyfFSrSUM&t=249s
-
-
-
-
