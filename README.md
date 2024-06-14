@@ -16,8 +16,8 @@ La plataforma ofrecerá una amplia gama de funciones, incluyendo la visualizaci�
 la notificación de eventos a través de correo electrónico. 
 
 # Tecnologías utilizadas
-Proxmox (VMs Ubuntu 20.04)
-Python (Flask)
+Proxmox (VMs Ubuntu 20.04).
+Python (Flask).
 HTML, CSS.
 MySQL.
 Correo.
